@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Little Surprise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SCREEN 1: password -->
+<section class="screen active" id="lock-screen">
+  <div class="hearts" aria-hidden="true"></div>
+  <div class="polaroid"><div class="pic"><img src="Nyhed9.jpg" alt="Birthday-photo"></div></div>
+  <h1 class="script" style="font-size:2rem;">A little surprise is waiting for you…</h1>
+  <p>But first, you need the secret code. 👀</p>
+  <form id="pwForm">
+    <input id="pw" type="text" inputmode="text" placeholder="secret code" aria-label="Secret code" autocomplete="off">
+    <button type="submit">Unlock 🔓</button>
+  </form>
+  <p class="hint">Ask the person who sent you this link for the code.</p>
+</section>
+
+<!-- SCREEN 2: gift -->
+<section class="screen" id="gift-screen">
+  <p class="script" style="font-size:1.6rem;">Something special happened on this day…</p>
+  <div class="date-reveal" id="dateReveal">DD • MM • YYYY</div>
+  <div class="giftbox" id="giftBox" role="button" tabindex="0" aria-label="Open the gift">🎁</div>
+  <p id="giftHint">There's something inside. Click the gift.</p>
+  <p id="gift-msg">Happy Birthday Nyheed! 🎂<br>Today is your special day, so I made something a little different for you…</p>
+  <button id="toCake" style="margin-top:24px; display:none;">Keep going →</button>
+</section>
+
+<!-- SCREEN 3: cake -->
+<section class="screen" id="cake-screen">
+  <p class="script" style="font-size:1.7rem;">Make a wish… ✨<br> (Teffi Chma3 )</p>
+  <div class="candles" id="candles">
+    <span class="candle">🕯️</span><span class="candle">🕯️</span><span class="candle">🕯️</span>
+  </div>
+  <div class="cake">🎂</div>
+  <p id="cake-msg">I hope your wishes come true. ✨<br>your dreams become reality, and every new day brings you happiness, love, and beautiful moments. May this year be filled with unforgettable memories and everything your heart wishes for. Happy Birthday! 🎂🎉 </p>
+  <button id="toLetter" style="margin-top:20px; display:none;">Keep going →</button>
+</section>
+
+<!-- SCREEN 3.5: photo memories (one photo per page) -->
+<section class="screen" id="memory-screen">
+  <p class="script" style="font-size:1.6rem;">A few memories… ✨</p>
+  <div class="mem-counter" id="memCounter">1 / 1</div>
+  <div class="mem-polaroid"><div class="pic" id="memPic">📸</div></div>
+  <div class="mem-caption" id="memCaption">Memory 01</div>
+  <div class="mem-nav">
+    <button id="memPrev">← Back</button>
+    <button id="memNext">Next →</button>
+  </div>
+</section>
+
+<!-- SCREEN 4: letter -->
+<section class="screen" id="letter-screen">
+  <div class="letter">
+    <div id="letterText"></div><span class="cursor" id="cursor">&nbsp;</span>
+    <div><button id="continueBtn">Ready for the final surprise? →</button></div>
+  </div>
+</section>
+
+<!-- SCREEN 5: finale -->
+<section class="screen" id="final-screen">
+  <div id="starfield" aria-hidden="true"></div>
+  <div id="floatingPics" aria-hidden="true"></div>
+  <div id="pre-final">
+    <p class="pre" id="oneLastThing" style="opacity:0; transition:opacity 1s;">One last thing…</p>
+    <button id="clickme">✨🤙🏻 Click me 🤙🏻✨</button>
+  </div>
+  <div id="finalMsg">
+    <h1>Happy Birthday Nyheeeed 🥳🎉✨🎊</h1>
+    <p class="sub" id="finalDate">DD • MM • YYYY — Forever worth celebrating.</p>
+  </div>
+</section>
+
+<!-- Background music: put your song file (mp3) in the same folder and update the name below -->
+<audio id="bgMusic" src="happy-birthday.mp3" loop preload="auto"></audio>
+<button id="musicToggle" class="music-btn" aria-label="Play or pause music">🔇</button>
+
+<script src="script.js"></script>
+</body>
+</html>
